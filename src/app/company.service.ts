@@ -8,6 +8,19 @@ export class CompanyService{
      // 1. preparing the name
       CompanyName = "Misard.com"    // one member....... 
       Industry    = "IT"; 
+
+
+      sendCompanyDetails(companyName : string , industry : string){
+            var companyDetails = 
+            { 
+                  "CompanyName" :  companyName ,
+                   "Industry" : industry 
+            };
+            
+            return companyDetails;
+      }
+
+
 }
 
 
