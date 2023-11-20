@@ -10,12 +10,12 @@ import { Subject } from 'rxjs';
 
 export class CompanyService{
      // 1. preparing the name
+      
       CompanyName = "Misard.com"    // one member....... 
+      
       Industry    = "IT"; 
 
       eventEmitter = new EventEmitter<any>();
-
-      //subject =  new Subject()
 
       sendCompanyDetails(companyName : string , industry : string){
             var companyDetails = 
@@ -24,8 +24,18 @@ export class CompanyService{
                    "Industry" : industry 
             };
             //upload
-            //this.eventEmitter.emit("companyDetails");
+
+            //eventEmitter useful for to process the data...
+            this.eventEmitter.emit(companyDetails);
+
             return companyDetails;
+      }
+
+
+      postEventEmitter = new EventEmitter<any>();
+      
+      postCompanyDetails(companyUpdates : string){
+            this.postEventEmitter.emit(companyUpdates);
       }
 
 

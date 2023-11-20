@@ -1,18 +1,26 @@
 <div class="container mt-5">
   <div class="card">
-   <div class="card-header bg-primary text-white">First Component</div>
-      <div class="card-body">
-            <div class="row">
-               <div class="col-12">
-                   <span> CompanyName : {{company}}    and Industry : {{industry}} </span>
-               </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-6 text-center">
-                  <button class="btn btn-primary" (click)="GetDetails()">Get</button>
-              </div>
-           </div>
+    <div class="card-header bg-primary text-white">First Component</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+          <span>
+            CompanyName : {{ company }} and Industry : {{ industry }}
+          </span>
+        </div>
       </div>
+      <hr />
+      <div class="row">
+        <div class="col-6">
+          <input [(ngModel)]="txtCompanyName" class="form-control" />
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary" (click)="GetDetails()">Get</button>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-primary" (click)="PostDetails()" >Post</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 
 
   <div class="card">
-    <div class="card-header bg-primary text-white">Logs</div>
+    <div class="card-header bg-primary text-white">Details</div>
        <div class="card-body">
              <div class="row">
                 <div class="col-12">
@@ -14,11 +14,12 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr *ngFor="let item of companiesDetails ;
+                                  let index = index">
                         
-                        <td>1</td>
-                        <td>FirstComponent</td>
-                        <td>CompanyName : Misard.com and Industry : IT</td>
+                        <td> {{index+1}} </td>
+                        <td> Its Under maintaince ... will be availble soon</td>
+                        <td> {{item}}</td>
                       </tr>
                     </tbody>
                   </table>

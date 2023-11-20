@@ -5,7 +5,7 @@ import { CompanyService } from '../company.service';
   selector: 'app-first-comp',
   templateUrl: './first-comp.component.html',
   styleUrls: ['./first-comp.component.css'],
-  providers : [CompanyService]
+  //providers : [ CompanyService ]
 })
 
 
@@ -38,8 +38,6 @@ export class FirstCompComponent {
 
 
    }
-
-
    
    details:any = {};
 
@@ -52,10 +50,20 @@ export class FirstCompComponent {
      this.industry = this.details.Industry;
 
 
-     this._companyService.eventEmitter.emit("Company");
+     //this._companyService.eventEmitter.emit("Company");
 
 
    }
+
+   /* i am tring to give the companyname which is in the textbox i am passing to the
+      postcompanydetails method of the  companyservice 
+   */
+  
+   txtCompanyName = "";
+   PostDetails(){
+       this._companyService.postCompanyDetails(this.txtCompanyName);
+   }
+
 
 
 
