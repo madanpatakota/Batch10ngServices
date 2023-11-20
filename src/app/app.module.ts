@@ -7,6 +7,8 @@ import { SecondCompComponent } from './second-comp/second-comp.component';
 import { ThirdCompComponent } from './third-comp/third-comp.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
+import { CompanyService } from './company.service';
+import { InformationService } from './information.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CompanyService , InformationService],
   bootstrap: [AppComponent]
 })
 

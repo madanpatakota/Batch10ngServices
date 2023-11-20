@@ -8,7 +8,7 @@ import { InformationService } from './information.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [CompanyService , InformationService]
+ // providers: [CompanyService , InformationService]
 })
 
 export class AppComponent implements OnInit {
