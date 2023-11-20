@@ -5,10 +5,18 @@
 // method
 // constrcutor.
 
-import { EventEmitter} from '@angular/core'
-import { Subject } from 'rxjs';
+import { EventEmitter , Injectable} from '@angular/core'
+import { InformationService } from './information.service';
 
+
+@Injectable()
 export class CompanyService{
+
+      constructor(public informationService : InformationService ){
+
+      }
+
+
      // 1. preparing the name
       
       CompanyName = "Misard.com"    // one member....... 
@@ -34,8 +42,13 @@ export class CompanyService{
 
       postEventEmitter = new EventEmitter<any>();
       
+
+      
       postCompanyDetails(companyUpdates : string){
-            this.postEventEmitter.emit(companyUpdates);
+            this.postEventEmitter.emit(companyUpdates);   // not only emitting the data.
+
+            this.informationService.receivedData(companyUpdates); // but also i am passing companyupdates information tot the informationService
+
       }
 
 

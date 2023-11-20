@@ -3,6 +3,14 @@
 1. Service  (MObile Service , Laptop Service , Bike Service)
 
 
+2. How to make the communication b/w one servie to another service. 
+
+
+3. appcomponnet i want to subscibe information service . then information service needs to get the
+   data from companyServie.
+
+
+
      Mobile Service 
      1. Recharge
      2. Earphones sellling
@@ -12,7 +20,12 @@
 
 
 
-      
+
+   companyservice 
+       
+
+
+   informationServie
 
 
 
