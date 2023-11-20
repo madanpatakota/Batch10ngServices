@@ -52,6 +52,7 @@ export class FirstCompComponent {
      this.industry = this.details.Industry;
 
 
+     this._companyService.eventEmitter.emit("Company");
 
 
    }
